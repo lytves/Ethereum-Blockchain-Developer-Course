@@ -15,14 +15,22 @@ contract WorkingWithVariables {
         myBool = _myBool;
     }
 
+    // overflow and underflow are avoided from 0.8 version of the Solidity compiler
+    // but we can use unchecked code block to use overflow/underflow behavior
     uint8 public myUint8;
 
-    function incrementUint() public {
+    function incrementUint8() public {
         myUint8++;
     }
 
-    function decrementUint() public {
+    function decrementUint8() public {
         myUint8--;
+    }
+
+    function decrementUint8Unchecked() public {
+        unchecked {
+            myUint8--;
+        }
     }
 
     address public myAddress;
