@@ -14,4 +14,24 @@ contract WorkingWithVariables {
     function setMyBool(bool _myBool) public {
         myBool = _myBool;
     }
+
+    uint8 public myUint8;
+
+    function incrementUint() public {
+        myUint8++;
+    }
+
+    function decrementUint() public {
+        myUint8--;
+    }
+
+    address public myAddress;
+
+    function setMyAddress(address _myAddress) public {
+        myAddress = _myAddress;
+    }
+
+    function getBalanceOfMyAddress() public view returns(uint) {
+        return myAddress.balance;
+    }
 }
